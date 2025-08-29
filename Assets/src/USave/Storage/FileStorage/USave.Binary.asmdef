@@ -1,0 +1,17 @@
+{
+    "name": "USave.Binary",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fee03b49339d64a718de4edf084119d7",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,24 @@
+{
+    "name": "USave.Serializers.NewtonsoftJson",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fee03b49339d64a718de4edf084119d7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "USAVE_NEWTONSOFT"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.nuget.newtonsoft-json",
+            "expression": "1.0.0",
+            "define": "USAVE_NEWTONSOFT"
+        }
+    ],
+    "noEngineReferences": false
+}

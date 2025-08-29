@@ -1,0 +1,25 @@
+{
+    "name": "USave.MessagePack",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fee03b49339d64a718de4edf084119d7",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "USAVE_MESSAGE_PACK"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.github.messagepack-csharp",
+            "expression": "1.0.0",
+            "define": "USAVE_MESSAGE_PACK"
+        }
+    ],
+    "noEngineReferences": false
+}

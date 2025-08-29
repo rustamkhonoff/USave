@@ -1,0 +1,16 @@
+{
+    "name": "USave.Serializers.Json",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fee03b49339d64a718de4edf084119d7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

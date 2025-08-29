@@ -1,0 +1,25 @@
+{
+    "name": "USave.Zenject",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fee03b49339d64a718de4edf084119d7",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ZENJECT"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.mathijsbakker.extenject",
+            "expression": "1.0.0",
+            "define": "ZENJECT"
+        }
+    ],
+    "noEngineReferences": false
+}
