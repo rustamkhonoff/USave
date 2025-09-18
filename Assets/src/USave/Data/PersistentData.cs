@@ -141,6 +141,41 @@ namespace USave.Data
             Updated?.Invoke(m_value);
         }
 
+        public async UniTask Update<TState>(Action<T, TState> action, TState state, bool autoSave = true, CancellationToken ct = default)
+        {
+            if (!m_dataRegistry.Has<T>())
+            {
+                m_logger.LogError($"[USave] No default factory for {typeof(T)}");
+                return;
+            }
+
+            await EnsureLoadedAsync(ct);
+
+            action?.Invoke(m_value, state);
+
+            if (autoSave) await Save(ct);
+
+            Updated?.Invoke(m_value);
+        }
+
+        public async UniTask Update<TState1, TState2>(Action<T, TState1, TState2> action, TState1 state1, TState2 state2, bool autoSave = true,
+            CancellationToken ct = default)
+        {
+            if (!m_dataRegistry.Has<T>())
+            {
+                m_logger.LogError($"[USave] No default factory for {typeof(T)}");
+                return;
+            }
+
+            await EnsureLoadedAsync(ct);
+
+            action?.Invoke(m_value, state1, state2);
+
+            if (autoSave) await Save(ct);
+
+            Updated?.Invoke(m_value);
+        }
+
         private UniTask EnsureLoadedAsync(CancellationToken ct) => m_loaded ? UniTask.CompletedTask : Load(ct);
     }
 }

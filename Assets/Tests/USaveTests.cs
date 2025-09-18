@@ -72,6 +72,7 @@ namespace Tests
                 IPersistentData<GlobalSavedData> persistentData = Container.Resolve<IPersistentData<GlobalSavedData>>();
 
                 await persistentData.Update(a => a.A = 150);
+
                 bool exists = await persistentData.Exists();
 
                 Assert.IsTrue(exists);
