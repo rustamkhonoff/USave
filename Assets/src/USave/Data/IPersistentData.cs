@@ -14,9 +14,9 @@ namespace USave.Data
         UniTask Delete(CancellationToken ct = default);
         UniTask Reset(CancellationToken ct = default);
         UniTask Update(Action<T> action, bool autoSave = true, CancellationToken ct = default);
-        UniTask Update<TState>(Action<T, TState> action, TState state, bool autoSave = true, CancellationToken ct = default);
 
-        UniTask Update<TState1, TState2>(Action<T, TState1, TState2> action, TState1 state1, TState2 state2, bool autoSave = true,
-            CancellationToken ct = default);
+        UniTask Update<TState>(TState state, Action<T, TState> action, bool autoSave = true, CancellationToken ct = default);
+
+        UniTask Update<TState1, TState2>(TState1 state1, TState2 state2, Action<T, TState1, TState2> action, bool autoSave = true, CancellationToken ct = default);
     }
 }
