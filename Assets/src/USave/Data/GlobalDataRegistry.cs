@@ -63,7 +63,6 @@ namespace USave.Data
             string key = PersistentDataGlobal.DefaultKeyFunc(type);
             Entry newEntry = new(key, (Func<T>)Activator.CreateInstance<T>);
             m_registry[type] = newEntry;
-            m_logger.Log($"Added entry for type {type} with key {key}");
             entry = newEntry;
             return true;
         }
