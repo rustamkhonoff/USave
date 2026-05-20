@@ -18,13 +18,13 @@ namespace USave.Serializers
         public ReadOnlyMemory<byte> Serialize<T>(T data, CancellationToken ct = default)
         {
             string json = JsonConvert.SerializeObject(data, m_jsonSerializerSettings);
-            byte[] bytes = Encoding.ASCII.GetBytes(json);
+            byte[] bytes = Encoding.UTF8.GetBytes(json);
             return new ReadOnlyMemory<byte>(bytes);
         }
 
         public T Deserialize<T>(ReadOnlyMemory<byte> bytes, CancellationToken ct = default)
         {
-            string json = Encoding.ASCII.GetString(bytes.Span);
+            string json = Encoding.UTF8.GetString(bytes.Span);
             return JsonConvert.DeserializeObject<T>(json, m_jsonSerializerSettings);
         }
     }
